@@ -1,0 +1,28 @@
+/**
+ * Created by Liyonglei on 2017/3/22.
+ * 将chrome firefox ie10+ 的样式统一
+ * ie9还会使用默认的样式
+ */
+select {
+    border: 1px solid #999;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+}
+::-ms-expand {
+    display: none;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none),(-webkit-min-device-pixel-ratio:0){
+    select{
+        background: url("arrow.svg") no-repeat right 4px center;
+        padding-left: 4px;
+        padding-right: 16px;
+    }
+}
+@-moz-document url-prefix(){
+    select{
+        background: url("arrow.svg") no-repeat right 4px center;
+        padding-left: 4px;
+        padding-right: 16px;
+    }
+}
